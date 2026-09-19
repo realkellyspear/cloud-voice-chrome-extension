@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "CloudVoice Chrome",
+  "version": "1.0.1",
+  "description": "Highlight any text and read it aloud with any elevenlabs voice using your API key.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "offscreen",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8001/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CloudVoice Chrome"
+  },
+  "commands": {
+    "read-selected-text": {
+      "suggested_key": { "default": "Ctrl+Shift+S", "mac": "Command+Shift+S" },
+      "description": "Read highlighted text"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
